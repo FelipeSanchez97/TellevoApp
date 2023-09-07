@@ -8,5 +8,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <p>Bienvenido! {{ nombreUsuario }}</p>
+  <p>Bienvenido {{ nombreUsuario }}!</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="inicio">
+        <ion-icon name="home-outline"></ion-icon>
+        Inicio
+      </ion-tab-button>
+      <ion-tab-button tab="solicitar Viaje">
+        <ion-icon name="car-sport-outline"></ion-icon>
+        Solicitar Viaje
+      </ion-tab-button>
+      <ion-tab-button tab="Notificaciones">
+        <ion-icon name="notifications-outline"></ion-icon>
+        Notificaciones
+      </ion-tab-button>
+      <ion-tab-button tab="accessibility-outline">
+        <ion-icon name="accessibility-outline"></ion-icon>
+        Cuenta
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
