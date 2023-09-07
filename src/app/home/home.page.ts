@@ -1,6 +1,10 @@
+import { AuthenticationService } from './../authentication.service';
 import { AlertController, NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators,FormBuilder } from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-home',
@@ -10,8 +14,9 @@ import { FormGroup,FormControl,Validators,FormBuilder } from '@angular/forms';
 export class HomePage implements OnInit {
 
   formularioLogin: FormGroup;
+  nombreUsuario: string = '';
 
-  constructor(public fb: FormBuilder, public alertController: AlertController, public navCtrl: NavController ) {
+  constructor(public fb: FormBuilder, public alertController: AlertController, public navCtrl: NavController, private AuthenticationService: AuthenticationService ) {
 
     this.formularioLogin = this.fb.group({
       'nombre': new FormControl("", Validators.required),
@@ -34,6 +39,7 @@ var cuentas: { nombre: string; password: string; }[] = cuentasString ? JSON.pars
   if (usuarioValido) {
     console.log('Ingresado');
     localStorage.setItem('ingresado', 'true');
+    this.AuthenticationService.nombreUsuario = f.nombre;
     this.navCtrl.navigateForward('/inicio');
   } else {
     const alert = await this.alertController.create({

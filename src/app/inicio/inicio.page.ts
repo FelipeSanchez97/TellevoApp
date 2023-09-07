@@ -1,4 +1,7 @@
+import { AuthenticationService } from './../authentication.service';
 import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-inicio',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+  nombreUsuario: string = '';
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
+    this.nombreUsuario = this.authenticationService.nombreUsuario;
   }
 
 }
