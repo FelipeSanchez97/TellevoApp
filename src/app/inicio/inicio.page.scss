@@ -5,6 +5,37 @@ ion-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Centra el texto horizontalmente */
-    height: 100vh; /* Opcional: Asegura que el contenido ocupe todo el alto de la ventana */
+    text-align: center; 
+    height: 100vh; 
   }
+
+ /* Estilo para el contenedor de las tarjetas */
+.card-container {
+  display: flex;
+  flex-direction: row; /* Alinea las tarjetas en una fila horizontal */
+}
+
+/* Establece el tamaño de las tarjetas */
+.custom-card {
+  width: 100px; /* Ancho deseado */
+  height: 100px; /* Altura deseada */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-right: 10px; /* Espacio entre las tarjetas (opcional) */
+}
+
+/* Estilo para el icono */
+.custom-card ion-icon {
+  font-size: 36px; /* Tamaño del icono */
+}
+
+/* Estilo para el texto */
+.custom-card p {
+  font-size: 16px; /* Tamaño del texto */
+}
+  
