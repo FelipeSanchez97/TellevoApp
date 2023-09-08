@@ -1,14 +1,30 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="warning">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Inicio</ion-title>
+    <ion-searchbar animated="true" placeholder="Animated" show-clear-button="focus"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="dark">
+<ion-content [fullscreen]="true">
   <p>Bienvenido {{ nombreUsuario }}!</p>
+  <br>
+  
+  <div class="card-container">
+    <div class="custom-card">
+      <ion-icon name="car-sport-outline"></ion-icon>
+      <p>Viaje</p>
+    </div>
+    <div class="custom-card">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <p>Reserve</p>
+    </div>
+    
+  </div>
+  
+  
+  
  
   <ion-tabs>
     <ion-tab-bar slot="bottom">
